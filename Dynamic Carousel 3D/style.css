@@ -1,0 +1,37 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.content{
+    width: 400px;
+    perspective: 1000px;
+    margin: 200px 45%;
+    position: relative;
+}
+
+.carousel{
+    width: 50%;
+    position: absolute;
+    animation: rotate 15s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.carousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.carousel div:hover{
+    opacity: 0.1;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
